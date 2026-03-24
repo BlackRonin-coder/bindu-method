@@ -1,0 +1,56 @@
+
+{
+  "frameworks": [
+    {
+      "id": "btce",
+      "title": "BTCE Ethical Governor",
+      "layer": "ethical_governor",
+      "status": "canonical",
+      "authority_rank": 1,
+      "version": "v1.0",
+      "active": true,
+      "file_path": "frameworks/canonical/JSON BTCE 📖 BILBLE.txt"
+    },
+    {
+      "id": "bindu_kernel",
+      "title": "Bindu Core Kernel",
+      "layer": "kernel",
+      "status": "canonical",
+      "authority_rank": 2,
+      "version": "v1.0",
+      "active": true,
+      "file_path": "frameworks/canonical/JSON Bindu.txt"
+    },
+    {
+      "id": "logic_proofing",
+      "title": "Logic Proof 3",
+      "layer": "logic_proofing",
+      "status": "canonical",
+      "authority_rank": 3,
+      "version": "v3.0",
+      "active": true,
+      "file_path": "frameworks/canonical/JSON LOGIC PROOF 3.txt"
+    },
+    {
+      "id": "governance_layer",
+      "title": "Bindu Governance Layer",
+      "layer": "governance",
+      "status": "canonical",
+      "authority_rank": 4,
+      "version": "v1.0",
+      "active": true,
+      "file_path": "frameworks/canonical/JSON BINDU GOVERNANCE LAYER.txt"
+    },
+    {
+      "id": "home_domain",
+      "title": "STERLING HOME",
+      "layer": "domain_adapter",
+      "domain": "home",
+      "status": "canonical",
+      "authority_rank": 5,
+      "version": "v1.0",
+      "active": true,
+      "file_path": "frameworks/canonical/JSON  STERLING HOME.txt"
+    }
+  ]
+}

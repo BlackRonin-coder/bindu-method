@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bindu Python Core</title>
+</head>
+<body style="font-family: Arial, sans-serif; padding: 24px;">
+  <h1>Bindu Python Core</h1>
+
+  <label for="subject"><strong>Subject</strong></label><br>
+  <input id="subject" type="text" value="housing_delivery_system" style="width: 100%; max-width: 700px; margin-top: 8px; margin-bottom: 16px; padding: 8px;"><br>
+
+  <label for="request"><strong>Request</strong></label><br>
+  <textarea id="request" rows="6" style="width: 100%; max-width: 700px; margin-top: 8px; margin-bottom: 16px; padding: 8px;">optimise housing delivery</textarea><br>
+
+  <button onclick="runWL()" style="padding: 10px 18px;">WL = Run Bounded Workflow</button>
+
+  <h2 style="margin-top: 32px;">Output</h2>
+  <pre id="output" style="background: #f4f4f4; padding: 16px; max-width: 900px; white-space: pre-wrap;"></pre>
+
+  <script>
+    async function runWL() {
+      const subject = document.getElementById("subject").value;
+      const request = document.getElementById("request").value;
+      const output = document.getElementById("output");
+
+      output.textContent = "Running...";
+
+      try {
+        const response = await fetch("/run-wl", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ subject, request })
+        });
+
+        const data = await response.json();
+        output.textContent = JSON.stringify(data, null, 2);
+      } catch (err) {
+        output.textContent = "Error: " + err.message;
+      }
+    }
+  </script>
+</body>
+</html>
